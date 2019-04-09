@@ -6,7 +6,10 @@ project(Asteroids)
 find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIRS})
 
-add_executable(Asteroids main.cpp)
+set(GAMEENGINE "${PROJECT_SOURCE_DIR}/game/gamewindow.h"
+    "${PROJECT_SOURCE_DIR}/game/gamewindow.cpp")
+
+add_executable(Asteroids main.cpp ${GAMEENGINE})
 
 target_link_libraries(Asteroids ${SDL2_LIBRARIES})
 
