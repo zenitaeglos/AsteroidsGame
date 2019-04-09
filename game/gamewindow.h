@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include "SDL.h"
-#include "gamerenderer.h"
 
 using namespace std;
 
