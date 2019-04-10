@@ -1,20 +1,13 @@
 #include <iostream>
 #include "SDL.h"
-#include "game/gamewindow.h"
+#include "game/game.h"
 
 using namespace std;
 
 
 
 int main() {
-    GameWindow* gameAsteroids = new GameWindow("Asteroids", 100, 100, 600, 480, 0);
-
-
-    while (gameAsteroids->running()) {
-        gameAsteroids->renderGame();
-    }
-
-
-
+    Game* game = new Game();
+    game->execute();
     return 0;
 }

@@ -7,7 +7,9 @@ find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIRS})
 
 set(GAMEENGINE "${PROJECT_SOURCE_DIR}/game/gamewindow.h"
-    "${PROJECT_SOURCE_DIR}/game/gamewindow.cpp")
+    "${PROJECT_SOURCE_DIR}/game/gamewindow.cpp"
+    "${PROJECT_SOURCE_DIR}/game/game.h"
+    "${PROJECT_SOURCE_DIR}/game/game.cpp")
 
 set(ENTITIES "${PROJECT_SOURCE_DIR}/elements/entity.h"
     "${PROJECT_SOURCE_DIR}/elements/entity.cpp"
