@@ -1,7 +1,7 @@
 #include "game.h"
 
-Game::Game() :
-    gameWindow(new GameWindow("Asteroids", 100, 100, 640, 480, 0))
+Game::Game(const char *titleGame, int xPosition, int yPosition, int width, int height, int flag) :
+    gameWindow(new GameWindow(titleGame, xPosition, yPosition, width, height, flag))
 {
 
 }
