@@ -9,7 +9,12 @@ include_directories(${SDL2_INCLUDE_DIRS})
 set(GAMEENGINE "${PROJECT_SOURCE_DIR}/game/gamewindow.h"
     "${PROJECT_SOURCE_DIR}/game/gamewindow.cpp")
 
-add_executable(Asteroids main.cpp ${GAMEENGINE})
+set(ENTITIES "${PROJECT_SOURCE_DIR}/elements/entity.h"
+    "${PROJECT_SOURCE_DIR}/elements/entity.cpp"
+    "${PROJECT_SOURCE_DIR}/elements/spaceship.h"
+    "${PROJECT_SOURCE_DIR}/elements/spaceship.cpp")
+
+add_executable(Asteroids main.cpp ${GAMEENGINE} ${ENTITIES})
 
 target_link_libraries(Asteroids ${SDL2_LIBRARIES})
 
