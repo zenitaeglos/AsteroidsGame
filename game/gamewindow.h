@@ -15,6 +15,7 @@ public:
     bool running() const;
 
     void renderGame();
+    void handleEvent();
 
 private:
     const char* titleGame;

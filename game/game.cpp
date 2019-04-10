@@ -10,6 +10,6 @@ void Game::execute()
 {
     while (gameWindow->running()) {
         gameWindow->renderGame();
-
+        gameWindow->handleEvent();
     }
 }

@@ -15,7 +15,6 @@ GameWindow::GameWindow(const char *title, int xPosition, int yPosition, int widt
     }
     else
         isRunning = false;
-
 }
 
 bool GameWindow::running() const
@@ -28,4 +27,17 @@ void GameWindow::renderGame()
     SDL_RenderClear(rendererGame);
 
     SDL_RenderPresent(rendererGame);
+}
+
+void GameWindow::handleEvent()
+{
+    SDL_Event event;
+    SDL_PollEvent(&event);
+    switch (event.type) {
+        case SDL_QUIT:
+            isRunning = false;
+            break;
+        default:
+            break;
+    }
 }
