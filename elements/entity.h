@@ -22,11 +22,15 @@ public:
 
     string getName(Element element) const;
     const char* getResource(Element element);
+    void setElement(SDL_Renderer* renderer);
+    SDL_Texture* getElementTexture();
+    SDL_Rect* getSourceRectangle() const;
 
 
 protected:
     SDL_Surface* imageElement;
     SDL_Rect* sourceRectangle;
+    SDL_Texture* elementTexture;
 };
 
 #endif // ENTITY_H

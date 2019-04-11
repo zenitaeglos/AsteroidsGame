@@ -31,3 +31,18 @@ const char *Entity::getResource(Entity::Element element)
             return "assets/asteroid.png";
     }
 }
+
+void Entity::setElement(SDL_Renderer *renderer)
+{
+    elementTexture = SDL_CreateTextureFromSurface(renderer, imageElement);
+}
+
+SDL_Texture* Entity::getElementTexture()
+{
+    return elementTexture;
+}
+
+SDL_Rect *Entity::getSourceRectangle() const
+{
+    return sourceRectangle;
+}

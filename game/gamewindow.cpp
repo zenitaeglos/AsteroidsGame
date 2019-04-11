@@ -3,7 +3,8 @@
 GameWindow::GameWindow(const char *title, int xPosition, int yPosition, int width, int height, int flags) :
     titleGame(title), xPositionGame(xPosition), yPositionGame(yPosition),
     widthGame(width), heightGame(height), flagGame(flags), isRunning(true),
-    spaceShip(new SpaceShip())
+    spaceShip(new SpaceShip()),
+    asteroid(new Asteroid())
 {
     if(SDL_Init(SDL_INIT_EVERYTHING) == 0) {
         windowGame = SDL_CreateWindow(titleGame, xPositionGame, yPositionGame,
@@ -17,7 +18,8 @@ GameWindow::GameWindow(const char *title, int xPosition, int yPosition, int widt
     else
         isRunning = false;
 
-    spaceShip->setSpaceShip(rendererGame);
+    spaceShip->setElement(rendererGame);
+    asteroid->setElement(rendererGame);
 }
 
 bool GameWindow::running() const
@@ -29,7 +31,8 @@ void GameWindow::renderGame()
 {
     SDL_RenderClear(rendererGame);
 
-    SDL_RenderCopy(rendererGame, spaceShip->getSpaceShipTexture(), NULL, spaceShip->getSourceRectange());
+    SDL_RenderCopy(rendererGame, spaceShip->getElementTexture(), NULL, spaceShip->getSourceRectangle());
+    SDL_RenderCopy(rendererGame, asteroid->getElementTexture(), NULL, asteroid->getSourceRectangle());
     SDL_RenderPresent(rendererGame);
 }
 

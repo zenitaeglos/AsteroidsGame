@@ -17,18 +17,3 @@ void SpaceShip::setSourceRectangleProperties()
     sourceRectangle->h = 64;
     //set position todo
 }
-
-SDL_Rect *SpaceShip::getSourceRectange()
-{
-    return sourceRectangle;
-}
-
-void SpaceShip::setSpaceShip(SDL_Renderer *renderer)
-{
-    spaceShipTexture = SDL_CreateTextureFromSurface(renderer, imageElement);
-}
-
-SDL_Texture *SpaceShip::getSpaceShipTexture()
-{
-    return spaceShipTexture;
-}

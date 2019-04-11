@@ -4,6 +4,7 @@
 #include <iostream>
 #include "SDL2/SDL.h"
 #include "../elements/spaceship.h"
+#include "../elements/asteroid.h"
 
 using namespace std;
 
@@ -32,6 +33,7 @@ private:
     SDL_Renderer* rendererGame;
 
     SpaceShip* spaceShip;
+    Asteroid* asteroid;
 
 };
 

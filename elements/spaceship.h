@@ -16,12 +16,9 @@ public:
 
     virtual Element getType();
     void setSourceRectangleProperties();
-    SDL_Rect* getSourceRectange();
 
-    void setSpaceShip(SDL_Renderer* renderer);
-    SDL_Texture* getSpaceShipTexture();
+
 private:
-    SDL_Texture* spaceShipTexture;
     SDL_Rect* destinationRectangle;
 };
 
