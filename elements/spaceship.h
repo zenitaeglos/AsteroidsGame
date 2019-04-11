@@ -21,9 +21,7 @@ public:
     void setSpaceShip(SDL_Renderer* renderer);
     SDL_Texture* getSpaceShipTexture();
 private:
-    SDL_Surface* imageSpaceShip;
     SDL_Texture* spaceShipTexture;
-    SDL_Rect* sourceRectangle;
     SDL_Rect* destinationRectangle;
 };
 

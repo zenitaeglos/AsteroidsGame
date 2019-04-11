@@ -10,6 +10,10 @@ public:
     Asteroid();
 
     virtual Element getType();
+
+
+private:
+
 };
 
 #endif // ASTEROID_H

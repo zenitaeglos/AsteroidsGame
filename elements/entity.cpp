@@ -1,6 +1,8 @@
 #include "entity.h"
 
-Entity::Entity()
+Entity::Entity(Element element) :
+    imageElement(IMG_Load(getResource(element))),
+    sourceRectangle(new SDL_Rect())
 {
 
 }
@@ -24,8 +26,8 @@ const char *Entity::getResource(Entity::Element element)
 {
     switch (element) {
         case SpaceShip:
-        return "assets/space-shuttle.png";
-    default:
-        return "";
+            return "assets/space-shuttle.png";
+        case Asteroid:
+            return "assets/asteroid.png";
     }
 }

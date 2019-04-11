@@ -27,6 +27,7 @@ set(ENTITIES "${PROJECT_SOURCE_DIR}/elements/entity.h"
     "${PROJECT_SOURCE_DIR}/elements/asteroid.cpp")
 
 FILE(COPY ${PROJECT_SOURCE_DIR}/assets/space-shuttle.png DESTINATION "${CMAKE_BINARY_DIR}/assets")
+FILE(COPY ${PROJECT_SOURCE_DIR}/assets/asteroid.png DESTINATION "${CMAKE_BINARY_DIR}/assets")
 
 add_executable(Asteroids main.cpp ${GAMEENGINE} ${ENTITIES})
 

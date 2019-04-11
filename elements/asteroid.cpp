@@ -1,6 +1,7 @@
 #include "asteroid.h"
 
-Asteroid::Asteroid()
+Asteroid::Asteroid() :
+    Entity (Entity::Asteroid)
 {
 
 }
