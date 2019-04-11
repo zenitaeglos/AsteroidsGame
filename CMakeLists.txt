@@ -6,9 +6,13 @@ set(Asteroids_VERSION_MAJOR 0)
 set(Asteroids_VERSION_MINOR 1)
 set(Asteroids_VERSION_PATCH 0)
 
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
+
 
 find_package(SDL2 REQUIRED)
-include_directories(${SDL2_INCLUDE_DIRS})
+find_package(SDL2_image REQUIRED)
+include_directories(${SDL2_INCLUDE_DIRS} ${SDL2_IMAGE_DIRS})
+include_directories("${PROJECT_SOURCE_DIR}/assets")
 
 set(GAMEENGINE "${PROJECT_SOURCE_DIR}/game/gamewindow.h"
     "${PROJECT_SOURCE_DIR}/game/gamewindow.cpp"
@@ -22,9 +26,11 @@ set(ENTITIES "${PROJECT_SOURCE_DIR}/elements/entity.h"
     "${PROJECT_SOURCE_DIR}/elements/asteroid.h"
     "${PROJECT_SOURCE_DIR}/elements/asteroid.cpp")
 
+FILE(COPY ${PROJECT_SOURCE_DIR}/assets/space-shuttle.png DESTINATION "${CMAKE_BINARY_DIR}/assets")
+
 add_executable(Asteroids main.cpp ${GAMEENGINE} ${ENTITIES})
 
-target_link_libraries(Asteroids ${SDL2_LIBRARIES})
+target_link_libraries(Asteroids ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})
 
 
 

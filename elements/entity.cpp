@@ -19,3 +19,13 @@ string Entity::getName(Element element) const
             return "Asteroid";
     }
 }
+
+const char *Entity::getResource(Entity::Element element)
+{
+    switch (element) {
+        case SpaceShip:
+        return "assets/space-shuttle.png";
+    default:
+        return "";
+    }
+}

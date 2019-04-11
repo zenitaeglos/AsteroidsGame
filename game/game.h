@@ -18,7 +18,6 @@ public:
 
 private:
     GameWindow* gameWindow;
-
 };
 
 #endif // GAME_H

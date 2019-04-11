@@ -2,7 +2,8 @@
 #define GAMEWINDOW_H
 
 #include <iostream>
-#include "SDL.h"
+#include "SDL2/SDL.h"
+#include "../elements/spaceship.h"
 
 using namespace std;
 
@@ -30,6 +31,7 @@ private:
     SDL_Window* windowGame;
     SDL_Renderer* rendererGame;
 
+    SpaceShip* spaceShip;
 
 };
 

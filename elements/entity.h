@@ -18,6 +18,7 @@ public:
     virtual Element getType() = 0;
 
     string getName(Element element) const;
+    const char* getResource(Element element);
 };
 
 #endif // ENTITY_H
