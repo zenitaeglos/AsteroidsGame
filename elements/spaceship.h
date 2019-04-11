@@ -15,7 +15,6 @@ public:
     SpaceShip();
 
     virtual Element getType();
-    void setSourceRectangleProperties();
 
 
 private:

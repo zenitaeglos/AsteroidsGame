@@ -3,10 +3,7 @@
 Asteroid::Asteroid() :
     Entity (Entity::Asteroid)
 {
-    sourceRectangle->x = 100;
-    sourceRectangle->y = 100;
-    sourceRectangle->w = 64;
-    sourceRectangle->h = 64;
+    setSourceRectangleProperties();
 }
 
 Entity::Element Asteroid::getType()

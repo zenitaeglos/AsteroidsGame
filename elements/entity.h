@@ -25,6 +25,7 @@ public:
     void setElement(SDL_Renderer* renderer);
     SDL_Texture* getElementTexture();
     SDL_Rect* getSourceRectangle() const;
+    void setSourceRectangleProperties();
 
 
 protected:

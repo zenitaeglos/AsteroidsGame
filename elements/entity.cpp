@@ -46,3 +46,14 @@ SDL_Rect *Entity::getSourceRectangle() const
 {
     return sourceRectangle;
 }
+
+void Entity::setSourceRectangleProperties()
+{
+    if (this->getType() == Asteroid) {
+        sourceRectangle->x = 100;
+        sourceRectangle->y = 100;
+    }
+
+    sourceRectangle->w = 64;
+    sourceRectangle->h = 64;
+}
