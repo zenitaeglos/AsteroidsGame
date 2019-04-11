@@ -4,7 +4,7 @@ project(Asteroids)
 
 set(Asteroids_VERSION_MAJOR 0)
 set(Asteroids_VERSION_MINOR 1)
-set(Asteroids_VERSION_PATCH 0)
+set(Asteroids_VERSION_PATCH 1)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
 
