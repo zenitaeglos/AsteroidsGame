@@ -5,7 +5,7 @@ SpaceShip::SpaceShip()
 
 }
 
-string SpaceShip::getType()
+Entity::Element SpaceShip::getType()
 {
-    return "SpaceShip";
+    return Element::SpaceShip;
 }

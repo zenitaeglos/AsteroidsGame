@@ -11,7 +11,7 @@ class SpaceShip : public Entity
 public:
     SpaceShip();
 
-    virtual string getType();
+    virtual Element getType();
 };
 
 #endif // SPACESHIP_H

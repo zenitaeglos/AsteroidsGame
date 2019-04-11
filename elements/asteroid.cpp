@@ -5,7 +5,7 @@ Asteroid::Asteroid()
 
 }
 
-string Asteroid::getType()
+Entity::Element Asteroid::getType()
 {
-    return "Asteroid";
+    return Entity::Asteroid;
 }

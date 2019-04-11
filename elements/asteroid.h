@@ -9,7 +9,7 @@ class Asteroid : public Entity
 public:
     Asteroid();
 
-    virtual string getType();
+    virtual Element getType();
 };
 
 #endif // ASTEROID_H

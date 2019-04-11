@@ -18,7 +18,9 @@ set(GAMEENGINE "${PROJECT_SOURCE_DIR}/game/gamewindow.h"
 set(ENTITIES "${PROJECT_SOURCE_DIR}/elements/entity.h"
     "${PROJECT_SOURCE_DIR}/elements/entity.cpp"
     "${PROJECT_SOURCE_DIR}/elements/spaceship.h"
-    "${PROJECT_SOURCE_DIR}/elements/spaceship.cpp")
+    "${PROJECT_SOURCE_DIR}/elements/spaceship.cpp"
+    "${PROJECT_SOURCE_DIR}/elements/asteroid.h"
+    "${PROJECT_SOURCE_DIR}/elements/asteroid.cpp")
 
 add_executable(Asteroids main.cpp ${GAMEENGINE} ${ENTITIES})
 

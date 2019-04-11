@@ -8,10 +8,16 @@ using namespace std;
 class Entity
 {
 public:
+    enum Element {
+        SpaceShip,
+        Asteroid,
+    };
     Entity();
     virtual ~Entity();
 
-    virtual string getType() = 0;
+    virtual Element getType() = 0;
+
+    string getName(Element element) const;
 };
 
 #endif // ENTITY_H
