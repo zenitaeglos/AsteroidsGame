@@ -11,6 +11,8 @@
     #include "SDL2/SDL_image.h"
 #endif
 
+#include "behavior/movebehavior.h"
+
 using namespace std;
 
 class Entity
@@ -37,6 +39,8 @@ protected:
     SDL_Surface* imageElement;
     SDL_Rect* sourceRectangle;
     SDL_Texture* elementTexture;
+
+    MoveBehavior* moveBehavior;
 };
 
 #endif // ENTITY_H
