@@ -10,6 +10,8 @@
     #include "SDL2/SDL.h"
     #include "SDL2/SDL_image.h"
 #endif
+#include "behavior/manualmovebehavior.h"
+#include "behavior/movebehavior.h"
 
 using namespace std;
 

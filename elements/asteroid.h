@@ -11,6 +11,8 @@
     #include "SDL2/SDL_image.h"
 #endif
 
+#include "behavior/automaticmovebehavior.h"
+
 class Asteroid : public Entity
 {
 public:

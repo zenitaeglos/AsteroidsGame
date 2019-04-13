@@ -5,7 +5,12 @@ ManualMoveBehavior::ManualMoveBehavior()
 
 }
 
-MoveBehavior::Move ManualMoveBehavior::getType() const
+ManualMoveBehavior::~ManualMoveBehavior()
+{
+
+}
+
+MoveBehavior::Move ManualMoveBehavior::getType()
 {
     return Move::Manual;
 }

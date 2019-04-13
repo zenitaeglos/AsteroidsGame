@@ -4,3 +4,8 @@ MoveBehavior::MoveBehavior()
 {
 
 }
+
+MoveBehavior::~MoveBehavior()
+{
+
+}

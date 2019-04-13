@@ -16,7 +16,7 @@ public:
     };
     MoveBehavior();
     virtual ~MoveBehavior();
-    virtual Move getType() const = 0;
+    virtual Move getType() = 0;
 
 };
 

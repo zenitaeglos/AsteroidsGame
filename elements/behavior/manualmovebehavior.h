@@ -10,6 +10,8 @@ class ManualMoveBehavior : public MoveBehavior
 {
 public:
     ManualMoveBehavior();
+    virtual ~ManualMoveBehavior();
+    virtual Move getType();
 };
 
 #endif // MANUALMOVEBEHAVIOR_H

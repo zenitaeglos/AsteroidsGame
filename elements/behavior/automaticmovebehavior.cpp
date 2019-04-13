@@ -5,7 +5,12 @@ AutomaticMoveBehavior::AutomaticMoveBehavior()
 
 }
 
-MoveBehavior::Move AutomaticMoveBehavior::getType() const
+AutomaticMoveBehavior::~AutomaticMoveBehavior()
+{
+
+}
+
+MoveBehavior::Move AutomaticMoveBehavior::getType()
 {
     return Move::Automatic;
 }
