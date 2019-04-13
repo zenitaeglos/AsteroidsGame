@@ -2,7 +2,13 @@
 #define GAMEWINDOW_H
 
 #include <iostream>
-#include "SDL2/SDL.h"
+#ifdef __APPLE__
+    #include "SDL.h"
+    #include "SDL_image.h"
+#elif __linux__
+    #include "SDL2/SDL.h"
+    #include "SDL2/SDL_image.h"
+#endif
 #include "../elements/spaceship.h"
 #include "../elements/asteroid.h"
 
