@@ -11,6 +11,7 @@
 #endif
 #include "../elements/spaceship.h"
 #include "../elements/asteroid.h"
+#include "../elements/images.h"
 
 using namespace std;
 
@@ -40,6 +41,7 @@ private:
 
     SpaceShip* spaceShip;
     Asteroid* asteroid;
+    Images* backgroundImage;
 
 };
 

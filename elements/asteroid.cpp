@@ -3,7 +3,6 @@
 Asteroid::Asteroid() :
     Entity (Entity::Asteroid)
 {
-    setSourceRectangleProperties();
     moveBehavior = new AutomaticMoveBehavior;
 }
 

@@ -1,10 +1,11 @@
 #include "entity.h"
 
-Entity::Entity(Element element) :
+Entity::Entity(Element element, int width, int height) :
     imageElement(IMG_Load(getResource(element))),
     sourceRectangle(new SDL_Rect())
 {
-
+    sourceRectangle->w = width;
+    sourceRectangle->h = height;
 }
 
 Entity::~Entity()
@@ -19,6 +20,8 @@ string Entity::getName(Element element) const
             return "SpaceShip";
         case Asteroid:
             return "Asteroid";
+        case Image:
+            return "Image";
     }
 }
 
@@ -29,6 +32,9 @@ const char *Entity::getResource(Entity::Element element)
             return "assets/space-shuttle.png";
         case Asteroid:
             return "assets/asteroid.png";
+        case Image:
+            return "assets/Space-PNG-Pic.png";
+
     }
 }
 
@@ -45,15 +51,4 @@ SDL_Texture* Entity::getElementTexture()
 SDL_Rect *Entity::getSourceRectangle() const
 {
     return sourceRectangle;
-}
-
-void Entity::setSourceRectangleProperties()
-{
-    if (this->getType() == Asteroid) {
-        sourceRectangle->x = 100;
-        sourceRectangle->y = 100;
-    }
-
-    sourceRectangle->w = 64;
-    sourceRectangle->h = 64;
 }

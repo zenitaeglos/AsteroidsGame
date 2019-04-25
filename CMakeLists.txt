@@ -27,16 +27,21 @@ set(ENTITIES "${PROJECT_SOURCE_DIR}/elements/entity.h"
     "${PROJECT_SOURCE_DIR}/elements/spaceship.cpp"
     "${PROJECT_SOURCE_DIR}/elements/asteroid.h"
     "${PROJECT_SOURCE_DIR}/elements/asteroid.cpp"
+    "${PROJECT_SOURCE_DIR}/elements/images.h"
+    "${PROJECT_SOURCE_DIR}/elements/images.cpp"
     "${PROJECT_SOURCE_DIR}/elements/behavior/movebehavior.h"
     "${PROJECT_SOURCE_DIR}/elements/behavior/movebehavior.cpp"
     "${PROJECT_SOURCE_DIR}/elements/behavior/manualmovebehavior.h"
     "${PROJECT_SOURCE_DIR}/elements/behavior/manualmovebehavior.cpp"
     "${PROJECT_SOURCE_DIR}/elements/behavior/automaticmovebehavior.h"
-    "${PROJECT_SOURCE_DIR}/elements/behavior/automaticmovebehavior.cpp")
+    "${PROJECT_SOURCE_DIR}/elements/behavior/automaticmovebehavior.cpp"
+    "${PROJECT_SOURCE_DIR}/elements/behavior/nobehavior.h"
+    "${PROJECT_SOURCE_DIR}/elements/behavior/nobehavior.cpp")
 
 
 FILE(COPY ${PROJECT_SOURCE_DIR}/assets/space-shuttle.png DESTINATION "${CMAKE_BINARY_DIR}/assets")
 FILE(COPY ${PROJECT_SOURCE_DIR}/assets/asteroid.png DESTINATION "${CMAKE_BINARY_DIR}/assets")
+FILE(COPY ${PROJECT_SOURCE_DIR}/assets/Space-PNG-Pic.png DESTINATION ${CMAKE_BINARY_DIR}/assets)
 
 add_executable(Asteroids main.cpp ${GAMEENGINE} ${ENTITIES})
 

@@ -3,7 +3,6 @@
 SpaceShip::SpaceShip() :
     Entity (Entity::SpaceShip)
 {
-    setSourceRectangleProperties();
 
     //now hardcoded the behavior chosen. Future to chose between ships
     //will give th option to choose between different behaviors

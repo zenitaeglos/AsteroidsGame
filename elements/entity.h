@@ -21,8 +21,9 @@ public:
     enum Element {
         SpaceShip,
         Asteroid,
+        Image,
     };
-    Entity(Element element);
+    Entity(Element element, int width = 64, int height = 64);
     virtual ~Entity();
 
     virtual Element getType() = 0;
@@ -32,7 +33,7 @@ public:
     void setElement(SDL_Renderer* renderer);
     SDL_Texture* getElementTexture();
     SDL_Rect* getSourceRectangle() const;
-    void setSourceRectangleProperties();
+    void setSourceRectangleProperties(int width = 64, int height = 64);
 
 
 protected:
